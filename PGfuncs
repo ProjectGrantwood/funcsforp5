@@ -16,4 +16,4 @@
   
 	function rInc(input, increment, roundingType = 'ROUND') {
 		return inc(Math.random() * input, increment, roundingType);
-	}
+	} 
