@@ -1,0 +1,19 @@
+	/////      inc() splits up an input into a standard increment:
+  
+  function inc(input, increment=1, roundingType='ROUND') {
+			if (roundingType === 'FLOOR') {
+				return Math.floor(input / increment) * increment;
+			} else if (roundingType === 'CEIL') {
+				return Math.ceil(input / increment) * increment;
+			} else if (roundingType === 'ROUND') {
+				return Math.round(input / increment) * increment;
+			} else {
+				return;
+			}
+		}
+	
+  ////       rInc randomizes an input and returns the result in a standard increment:
+  
+	function rInc(input, increment, roundingType = 'ROUND') {
+		return inc(Math.random() * input, increment, roundingType);
+	}
