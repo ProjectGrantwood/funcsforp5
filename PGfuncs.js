@@ -2,12 +2,12 @@
 */
 const PG = {
 	PHI: (1 + Math.sqrt(5)) / 2,
-	aPHI: ((1 + Math.sqrt(5)) / 2) - 1,
+	aPHI: (1 + Math.sqrt(5)) / 2 - 1,
 	E: Math.E,
 	PI: Math.PI,
 	TAU: Math.PI * 2,
 	R2: Math.sqrt(2),
-	R3_4: Math.sqrt(0.75),
+	R3_4: Math.sqrt(3 / 4),
 };
 
 function asinh(input) {
