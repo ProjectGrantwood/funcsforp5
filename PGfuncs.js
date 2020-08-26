@@ -135,17 +135,22 @@ function nacci(maxValue, returnSequence = false){
 	return fib;
 }
 
-function partitionRandomly(total, numberOfValues){
-	let returnArr = [];
-	let originalTotal = total;
-	let basePart = (total/numberOfValues);
-	while (total>basePart){
-		let val = Math.ceil(Math.random()*basePart);
-		returnArr.push(val);
-		total-=val;
+function partition(val, amt){
+	let valCopy = val;
+	let ratio = valCopy/(amt - 1)
+	if (ratio < 1){
+		console.log('function partition() failed: argument "val" must be greater than or equal to argument "amt"')
 	}
-	returnArr.push(total);
-	return returnArr;
+	else {
+		let arrayOfVals = [];
+		while (arrayOfVals.length < amt-1) {
+			let toAdd = Math.floor(Math.floor(Math.random() * ratio)+ratio/2);
+			valCopy -= toAdd;
+			arrayOfVals.push(toAdd)
+		}
+		arrayOfVals.push(valCopy)
+		return arrayOfVals;
+	}
 }
 
 function randomNumberArray(len, arrayMax, arrayMin=0, roundingType='NONE') {
